@@ -1,0 +1,16 @@
+.tabs {
+    display: none;
+
+    @include media('>mid') {
+        display: block;
+        list-style: none;
+        line-height: 50px;
+        margin: 0;
+    }
+}
+
+.tabs-title {
+    display: inline-block;  
+    padding: 0px 20px;
+}
+
