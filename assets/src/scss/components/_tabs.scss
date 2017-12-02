@@ -1,3 +1,4 @@
+// General Tab styles
 .tabs {
     display: none;
 
@@ -14,3 +15,27 @@
     padding: 0px 20px;
 }
 
+.tab-title--photography,
+.tabs-panel--photography {
+    background-color: $green;
+}
+
+.tab-title--film,
+.tabs-panel--film {
+    background-color: $blue;
+}
+
+.tab-title--web,
+.tabs-panel--web {
+    background-color: $purple;
+}
+
+.tab-title--design,
+.tabs-panel--design {
+    background-color: $pink;
+}
+
+.tab-title--media,
+.tabs-panel--media {
+    background-color: $orange;
+}
