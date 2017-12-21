@@ -1,0 +1,70 @@
+.accordion-heading {
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray;
+    margin: 0;
+    color: $bright;
+    font-weight: 500;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '+';
+        height: 14px;
+        width: 14px;
+        font-size: 18px;
+        line-height: 1;
+        right: 0;
+        top: 4px;
+        transition: all 0.3s ease;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover:after {
+        transform: rotate(360deg);
+    }
+
+    @include media('>mid') {
+        display: none;
+    }
+  
+}
+
+.accordion-content-visible {
+    overflow: hidden;
+    height: auto;
+    max-height: 500px; 
+    transition: all 0.3s cubic-bezier(1,0,1,0);
+
+    button {
+        opacity: 1;
+    }
+}
+
+.accordion-content-hide {
+    overflow: hidden;
+    margin: 0;
+    max-height: 0;
+    transition: all 0.3s cubic-bezier(0,1,0,1); 
+
+    @include media('>mid') {
+        height: auto;
+        max-height: none;
+        overflow: auto;
+    }
+    
+    p {
+        height: 0;
+
+        @include media('>mid') {
+            height: auto;
+        }
+    }
+
+    button {
+        opacity: 0;
+    }
+}

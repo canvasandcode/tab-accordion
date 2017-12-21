@@ -6,36 +6,97 @@
         display: block;
         list-style: none;
         line-height: 50px;
-        margin: 0;
+        margin: 0;  
     }
 }
 
 .tabs-title {
-    display: inline-block;  
-    padding: 0px 20px;
+    display: inline-block;
+    padding: 10px 0 0 0;
+    transition: padding 0.3s ease;  
+
+    a {
+        color: $bright;
+        padding: 14px 20px;
+    }
+
+    &:hover {
+        padding: 0;
+    }
 }
 
+.active {
+    padding: 0;
+}
+
+.tab-content-heading {
+    display: none;
+
+    @include media('>mid') {
+        display: block;
+        color: $bright;
+        font-weight: 500;
+        margin: 0;
+    }
+}
+
+.tabs-panel {
+    padding: 10px $baseline 0;
+
+    @include media('>mid') {
+        display: none;
+        padding: $baseline;
+    }
+
+    .tabs-panel-content {
+        
+        p {
+            color: $bright;
+            margin: 0;
+            padding: 20px 0;
+            display: inline-block;
+        }
+
+        img {
+            display: none;
+
+            @include media('>mid') {
+                display: block;
+            }
+        }
+    }
+}
+
+.tab-panel-active {
+    padding: $baseline $baseline;
+    
+    @include media('>mid') {
+        display: block;
+    }
+}
+
+
 .tab-title--photography,
-.tabs-panel--photography {
+#photography {
     background-color: $green;
 }
 
 .tab-title--film,
-.tabs-panel--film {
+#film {
     background-color: $blue;
 }
 
 .tab-title--web,
-.tabs-panel--web {
+#web {
     background-color: $purple;
 }
 
 .tab-title--design,
-.tabs-panel--design {
+#design {
     background-color: $pink;
 }
 
 .tab-title--media,
-.tabs-panel--media {
+#media {
     background-color: $orange;
 }

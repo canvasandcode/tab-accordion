@@ -12,10 +12,10 @@ import svg4everybody from 'svg4everybody'; // https://github.com/jonathantneal/s
 
 // Global libs that don't return a value
 import 'console';
-import 'kickoff-welcome.js'; // The Kickoff message in the js console. Remove it if you like :)
 
 // our code
-// import moduleTest from './modules/module-test'; // this is a test, uncomment the line below to try it
+import toggleAccordion from './modules/toggle-accordion';
+import toggleTabs from './modules/toggle-tabs';
 
 // DOM ready code goes in here
 ready(() => {
@@ -23,5 +23,6 @@ ready(() => {
 		polyfill: true, // polyfill <use> elements for External Content
 	});
 
-	// moduleTest(); // this is a test, uncomment this line to try it
+	toggleAccordion();
+	toggleTabs();
 });
