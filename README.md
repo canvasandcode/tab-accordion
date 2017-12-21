@@ -1,4 +1,4 @@
-# Tab / Accordion Module
+# Tab / Accordion Module (Vanilla JS)
 
 ## A responsive re-usable module which can be used across multiple pages.
 
